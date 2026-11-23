@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11111d">
+  <title>WOW efektua · Esperimentu bisualak</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="intro">
+      <div class="eyebrow"><span class="status-dot"></span> LABORATEGI BISUALA <span class="eyebrow-divider">/</span> 01</div>
+      <div class="intro-layout">
+        <div>
+          <p class="kicker">Galdera txiki handi bat</p>
+          <h1>Eta hau guztia<br><em>magia balitz?</em></h1>
+          <p class="intro-copy">Sei efektu, galdera bat eta aukera ugari. Arakatu adibide bakoitza, atzean zer dagoen aurkitu aurretik.</p>
+        </div>
+        <div class="intro-note">
+          <span class="note-number">06</span>
+          <span>EFEKTU<br>ARAKATZEKO</span>
+          <span class="note-arrow" aria-hidden="true">↘</span>
+        </div>
+      </div>
+      <div class="question">
+        <span class="question-icon" aria-hidden="true">✳</span>
+        <p>Uste duzue hau guztia egin daitekeela <strong>CSS soilik erabiliz, JavaScript gabe?</strong></p>
+        <details class="answer">
+          <summary>Ikusi erantzuna <span aria-hidden="true">↗</span></summary>
+          <p>Bai! Orrialde honetako sei efektuak CSS erabiliz eginda daude. Ireki «Ikusi kodea» adibide bakoitzean, nola egin diren jakiteko.</p>
+        </details>
+      </div>
+    </header>
+
+    <section class="examples" aria-labelledby="examples-title">
+      <div class="section-heading">
+        <div><p class="section-label">ESPERIMENTUA</p><h2 id="examples-title">Efektu txikiak, <span>ideia handiak.</span></h2></div>
+        <p>Pasa sagua gainetik, elkarreragin<br>eta ikusi zer gertatzen den. <span aria-hidden="true">↓</span></p>
+      </div>
+
+      <div class="grid">
+        <article class="example">
+          <div class="example-top"><span>01 / ELKARRERAGINA</span><span class="chip">SAGUA GAINEAN</span></div>
+          <div class="stage stage-button"><button class="grow-button" type="button">Pasa sagua hemen <span aria-hidden="true">↗</span></button></div>
+          <div class="example-info"><div><h3>Handitzen den botoia</h3><p>Keinu txiki bat, erantzun handi bat.</p></div><span class="example-symbol" aria-hidden="true">↗</span></div>
+          <details class="code"><summary>Ikusi kodea <span aria-hidden="true">+</span></summary><pre><code>.grow-button {
+  transition: transform 0.3s ease;
+}
+.grow-button:hover,
+.grow-button:focus-visible {
+  transform: scale(1.12);
+}</code></pre></details>
+        </article>
+
+        <article class="example">
+          <div class="example-top"><span>02 / PERSPEKTIBA</span><span class="chip">3D</span></div>
+          <div class="stage stage-card"><div class="tilt-card" tabindex="0"><span>KOLORE<br>AZTERKETA</span><span class="card-orb"></span><small>LAB / 003</small></div></div>
+          <div class="example-info"><div><h3>3D txartel bat</h3><p>Elkarreraginean, beste ikuspegi bat.</p></div><span class="example-symbol" aria-hidden="true">◇</span></div>
+          <details class="code"><summary>Ikusi kodea <span aria-hidden="true">+</span></summary><pre><code>.stage-card {
+  perspective: 700px;
+}
+.tilt-card {
+  transition: transform 0.45s ease;
+}
+.tilt-card:hover,
+.tilt-card:focus-visible {
+  transform: rotateY(-18deg) rotateX(10deg);
+}</code></pre></details>
+        </article>
+
+        <article class="example">
+          <div class="example-top"><span>03 / MUGIMENDUA</span><span class="chip">BIRAKETA</span></div>
+          <div class="stage stage-spin"><div class="spinner" aria-label="Biraka dabilen irudia"><span>✳</span></div></div>
+          <div class="example-info"><div><h3>Biraka dabilen elementua</h3><p>Mugimenduak ere badu erritmoa.</p></div><span class="example-symbol" aria-hidden="true">↻</span></div>
+          <details class="code"><summary>Ikusi kodea <span aria-hidden="true">+</span></summary><pre><code>.spinner {
+  animation: spin 8s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}</code></pre></details>
+        </article>
+
+        <article class="example">
+          <div class="example-top"><span>04 / AGERPENA</span><span class="chip">ANIMAZIOA</span></div>
+          <div class="stage stage-text"><p class="animated-text">Kaixo,<br><em>mundua.</em></p><span class="text-spark" aria-hidden="true">✳</span></div>
+          <div class="example-info"><div><h3>Agertzen den testua</h3><p>Hitzak ere agertokira atera daitezke.</p></div><span class="example-symbol" aria-hidden="true">✦</span></div>
+          <details class="code"><summary>Ikusi kodea <span aria-hidden="true">+</span></summary><pre><code>.animated-text {
+  animation: appear 3s ease-in-out infinite;
+}
+@keyframes appear {
+  0%, 15% { opacity: 0; transform: translateY(18px); }
+  35%, 80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-8px); }
+}</code></pre></details>
+        </article>
+
+        <article class="example">
+          <div class="example-top"><span>05 / XEHETASUNA</span><span class="chip">HANDITZEA</span></div>
+          <div class="stage stage-image"><div class="image-frame" tabindex="0"><img class="zoom-image" src="paisaje.svg" alt="Mendien gaineko eguzki baten ilustrazioa"></div></div>
+          <div class="example-info"><div><h3>Handitzen den irudia</h3><p>Hurbildu eta begiratu xeheago.</p></div><span class="example-symbol" aria-hidden="true">⌁</span></div>
+          <details class="code"><summary>Ikusi kodea <span aria-hidden="true">+</span></summary><pre><code>.image-frame {
+  overflow: hidden;
+}
+.zoom-image {
+  transition: transform 0.5s ease;
+}
+.image-frame:hover .zoom-image,
+.image-frame:focus-visible .zoom-image {
+  transform: scale(1.15);
+}</code></pre></details>
+        </article>
+
+        <article class="example">
+          <div class="example-top"><span>06 / ANIMAZIOA</span><span class="chip">BEGIZTA</span></div>
+          <div class="stage stage-bounce"><div class="ball" aria-label="Errebotean dabilen zirkulua"></div><div class="ball-shadow" aria-hidden="true"></div></div>
+          <div class="example-info"><div><h3>Errebotean dabilen zirkulua</h3><p>Gelditu nahi ez duen animazioa.</p></div><span class="example-symbol" aria-hidden="true">↕</span></div>
+          <details class="code"><summary>Ikusi kodea <span aria-hidden="true">+</span></summary><pre><code>.ball {
+  animation: bounce 0.8s ease-in-out infinite alternate;
+}
+@keyframes bounce {
+  from { transform: translateY(-65px); }
+  to { transform: translateY(0); }
+}</code></pre></details>
+        </article>
+      </div>
+    </section>
+
+    <footer><span>IKASTEKO SORTUA <span aria-hidden="true">✳</span></span><p>Jakin-mina da guztiaren hasiera.</p><span>ARAKATU / AURKITU</span></footer>
+  </main>
+</body>
+</html>
