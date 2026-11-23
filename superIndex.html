@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090817">
+  <title>WOW laborategia · CSS esperimentuak</title>
+  <link rel="stylesheet" href="superStyles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">✳</span> WOW LABORATEGIA</div>
+      <span class="topbar-note">IRUDIMENERAKO ESPAZIOA / 01</span>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <p class="eyebrow">ONGI ETORRI ESPERIMENTURA</p>
+          <h1 id="hero-title">Irudimena<br><span>martxan.</span></h1>
+          <p class="hero-copy">Atari distiratsuak, planeta birakariak eta kolore biziz beteriko mugimendua. Prest pantailaren beste aldera bidaiatzeko?</p>
+          <a class="hero-link" href="#esperimentuak">ARAKATU EFEKTUAK <span aria-hidden="true">↘</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="planet"></div>
+          <span class="hero-star star-one">✳</span>
+          <span class="hero-star star-two">✦</span>
+        </div>
+      </section>
+      <div class="hero-bottom"><span>✦ &nbsp; BEGIRATU. PROBATU. IKASI.</span><span><strong>04</strong> ESPERIMENTU BISUAL</span></div>
+
+      <section class="gallery" id="esperimentuak" aria-labelledby="gallery-title">
+        <div class="section-heading">
+          <div><p class="section-kicker">01 / ESPERIMENTUAK</p><h2 id="gallery-title">Hau bai magia<span style="color:#c6a1ff">.</span></h2></div>
+          <p>Pasa sagua edo erabili teklatua elementuekin elkarreragiteko. Ondoren, begiratu kodeari.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <div class="card-top"><span>01 / ARGIA</span><span>ANIMAZIOA</span></div>
+            <div class="stage portal-stage" aria-hidden="true"><div class="portal"></div></div>
+            <div class="card-info"><div><h3>Neonezko ataria</h3><p>Argia, distira eta biraka dabiltzan eraztunak.</p></div><span aria-hidden="true">✳</span></div>
+            <details><summary>Ikusi CSS kodea <span aria-hidden="true">+</span></summary><pre><code>.portal {
+  border: 3px solid #f6d5ff;
+  border-radius: 50%;
+  box-shadow: 0 0 35px #e462ff;
+  animation: portal-pulse 2s ease-in-out infinite alternate;
+}
+@keyframes portal-pulse {
+  to { transform: scale(1.1); }
+}</code></pre></details>
+          </article>
+
+          <article class="card">
+            <div class="card-top"><span>02 / PERSPEKTIBA</span><span>3D / ELKARRERAGINA</span></div>
+            <div class="stage flip-stage"><div class="flip-card" tabindex="0" aria-label="Biratu txartela sagua gainean jarrita edo teklatuarekin fokatuta">
+              <div class="flip-face flip-front"><strong>✺</strong><small>BIRATU NAZAZU</small></div>
+              <div class="flip-face flip-back"><strong>KAIXO!</strong><small>BESTE ALDETIK</small></div>
+            </div></div>
+            <div class="card-info"><div><h3>Bi aurpegiko txartela</h3><p>Pasa sagua gainetik edo fokatu txartela, buelta emateko.</p></div><span aria-hidden="true">↻</span></div>
+            <details><summary>Ikusi CSS kodea <span aria-hidden="true">+</span></summary><pre><code>.flip-stage { perspective: 900px; }
+.flip-card {
+  transform-style: preserve-3d;
+  transition: transform .8s;
+}
+.flip-card:hover, .flip-card:focus-visible {
+  transform: rotateY(180deg);
+}
+.flip-face { backface-visibility: hidden; }
+.flip-back { transform: rotateY(180deg); }</code></pre></details>
+          </article>
+
+          <article class="card">
+            <div class="card-top"><span>03 / KOLOREA</span><span>GRADIENTEA</span></div>
+            <div class="stage text-stage"><p class="rainbow-text">IKARAGARRI!</p></div>
+            <div class="card-info"><div><h3>Kolorez aldatzen den testua</h3><p>Kolore sorta bat hitzen barruan mugitzen.</p></div><span aria-hidden="true">✦</span></div>
+            <details><summary>Ikusi CSS kodea <span aria-hidden="true">+</span></summary><pre><code>.rainbow-text {
+  background: linear-gradient(90deg, #ffae91, #ff71d0,
+    #a486ff, #69e5ff, #ffae91);
+  background-size: 300% 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: rainbow 4s linear infinite;
+}
+@keyframes rainbow {
+  to { background-position: 300% 0; }
+}</code></pre></details>
+          </article>
+
+          <article class="card">
+            <div class="card-top"><span>04 / UNIBERTSOA</span><span>ORBITA</span></div>
+            <div class="stage solar-stage" aria-label="Planeta bat eguzkiaren inguruan biraka"><div class="sun"></div><div class="solar-orbit"></div></div>
+            <div class="card-info"><div><h3>Eguzki-sistema txikia</h3><p>Planeta bat, orbita bat eta bidaia amaigabea.</p></div><span aria-hidden="true">☼</span></div>
+            <details><summary>Ikusi CSS kodea <span aria-hidden="true">+</span></summary><pre><code>.solar-orbit {
+  border: 1px solid #9aafff80;
+  border-radius: 50%;
+  animation: spin 5s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}</code></pre></details>
+          </article>
+        </div>
+      </section>
+
+      <section class="question" aria-label="Galdera">
+        <p>Eta orain, galdera handia: <strong>dena CSS soilik erabiliz egin daiteke?</strong></p>
+        <details><summary>IKUSI ERANTZUNA <span aria-hidden="true">+</span></summary><p>Bai! Orrialde honetako efektu guztiak CSSrekin egin dira, JavaScript gabe. Ireki adibide bakoitzeko kodea eta probatu zeure aldaketak.</p></details>
+      </section>
+    </main>
+
+    <footer><span>✳ &nbsp; WOW LABORATEGIA</span><span>IRUDIMENA DA ABIAPUNTUA</span></footer>
+  </div>
+</body>
+</html>
